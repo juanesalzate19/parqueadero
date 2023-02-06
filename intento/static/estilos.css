@@ -1,0 +1,15 @@
+.fondo{
+    background-image: url('taller.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: fantasy;
+    font-size: 20px;
+}
+.borde{
+    border: white solid 4px;
+    padding: 40px;
+    background-image: url('fondo\ border.jpg');
+    
+}

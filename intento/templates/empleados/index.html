@@ -1,0 +1,39 @@
+{% extends "empleados/layout.html" %} 
+{% block content %} 
+   <table class="table table-light">
+    <thead class="thead-light">
+        <tr>
+            <th>id</th>
+            <th>documento</th>
+            <th>Nombre</th>
+            <th>placa</th>
+            <th>marca</th>
+            <th>modelo</th>
+            <th>color</th>
+            <th>daño</th>
+            <th>estado</th>
+            <th>acciones</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {% for empleado in empleados %} <!-- Con esto recuperamos los datos -->
+        <tr>
+            <td>{{empleado[0]}}</td>
+            <td>{{empleado[1]}}</td>
+            <td>{{empleado[2]}}</td>
+            <td>{{empleado[3]}}</td>
+            <td>{{empleado[4]}}</td>
+            <td>{{empleado[5]}}</td>
+            <td>{{empleado[6]}}</td>
+            <td>{{empleado[7]}}</td>
+            <td>{{empleado[8]}}</td>
+            <td><a href="/edit/{{empleado[0]}}">Editar</a> | 
+                <a href="/destroy/{{empleado[0]}}">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+        
+    </tbody>
+   </table> 
+   {%  endblock  %}

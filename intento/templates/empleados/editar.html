@@ -1,0 +1,31 @@
+{% extends "empleados/layout.html" %} 
+{% block content %} 
+
+{% for empleado in empleados%}
+
+<form action="/update" method="POST" enctype="multipar/form-data">
+    <br><br><br>
+    <label for="">id</label>&nbsp &nbsp &nbsp &nbsp &nbsp 
+    <input type="text" value="{{ empleado[0] }}" name="id" id="id"><br>
+    <label for="">documento</label>&nbsp &nbsp &nbsp &nbsp &nbsp 
+    <input type="text" value="{{ empleado[1] }}" name="documento" id="documento"><br>
+    <label for="">nombre</label>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+    <input type="text" value="{{ empleado[2] }}" name="nombre" id="nombre"><br>
+    <label for="">plca</label>&nbsp &nbsp &nbsp &nbsp 
+    <input type="text" value="{{ empleado[3] }}" name="placa" id="placa"><br>
+    <label for="">marca</label>&nbsp &nbsp &nbsp &nbsp 
+    <input type="text" value="{{ empleado[4] }}" name="marca" id="marca"><br>
+    <label for="">modelo</label>&nbsp &nbsp &nbsp &nbsp 
+    <input type="text" value="{{ empleado[5] }}" name="modelo" id="modelo"><br>
+    <label for="">color</label>&nbsp &nbsp &nbsp &nbsp 
+    <input type="text" value="{{ empleado[6] }}" name="color" id="color"><br>
+    <label for="">daño</label>&nbsp &nbsp &nbsp &nbsp 
+    <input type="text" value="{{ empleado[7] }}" name="daño" id="daño"><br>
+    <label for="">estado</label>&nbsp &nbsp &nbsp &nbsp 
+    <input type="text" value="{{ empleado[8] }}" name="estado" id="estado"><br><br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <input type="submit" name="Editar">
+</form>
+{% endfor %}
+
+{%  endblock  %}

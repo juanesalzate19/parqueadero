@@ -1,0 +1,41 @@
+{% extends "empleados/layout.html" %} 
+{% block content %} 
+<link rel="stylesheet" href="{{url_for('static', filename='estilos.css')}}">
+<div class="fondo">
+    <form action="/store" method="POST">
+        <br><br><br>
+        <div class="container-fluid text-center">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="borde">
+        <label for="">documento</label>&nbsp &nbsp &nbsp
+        <input type="text" class="form-control" placeholder= 'Escribe tu documento' name="documento" id="documento"><br>
+
+        <label for="">Nombre</label>&nbsp &nbsp &nbsp &nbsp 
+        <input type="text" class="form-control" placeholder= 'Escribe tu nombre' name="nombre" id="nombre"><br>
+
+        <label for="">placa</label>&nbsp &nbsp
+        <input type="text" class="form-control" placeholder= 'Escribe la placa de tu vehiculo' name="placa" id="placa"><br>
+
+        <label for="">marca</label>&nbsp &nbsp &nbsp
+        <input type="text"  class="form-control" placeholder= 'Escribe la marca de tu vehiculo' name="marca" id="marca"><br>
+
+        <label for="">modelo</label>&nbsp &nbsp &nbsp
+        <input type="text" class="form-control" placeholder= 'Escribe el modelo de tu vehiculo' name="modelo" id="modelo"><br>
+
+        <label for="">color</label>&nbsp &nbsp &nbsp
+        <input type="text" class="form-control" placeholder= 'Escribe el color de tu vehiculo' name="color" id="color"><br>
+
+        <label for="">daño</label>&nbsp &nbsp &nbsp
+        <input type="text" class="form-control" placeholder= 'Escribe los daños de tu vehiculo' name="daño" id="daño"><br>
+
+        <label for="">estado</label>&nbsp &nbsp &nbsp
+        <input type="text" class="form-control" placeholder= 'Escribe el estado de tu vehiculo' name="estado" id="estado"><br><br>
+
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        <input type="submit" class="form-control" name="Agregar">
+    </div>
+</div>
+</div>
+    </form>
+    {%  endblock  %}
